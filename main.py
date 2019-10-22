@@ -19,7 +19,7 @@ for num in mylist:
 
 # I want to see if the values in the list are the same as each other
 
-print (type (mylist))
+print (f'\nThe variable type is {type (mylist)}, good hey!\n')
 
 for num in another_list:
   num = num **2
@@ -64,15 +64,15 @@ print (final_list)
 
 print ('\n More attempts at duplicates here')
 
-dupItems = []
-uniqItems = {}
+dup_items = [] # creates a list of duplicates
+nodup_items = {} # creates a dict of unqiue items
 for x in final_list:
-   if x not in uniqItems:
-      uniqItems[x] = 1
+   if x not in nodup_items:
+      nodup_items[x] = 1
    else:
-      if uniqItems[x] == 1:
-         dupItems.append(x)
-      uniqItems[x] += 1
-print(f'Duplicate numbers in final_list {dupItems}')
+      if nodup_items[x] == 1:
+         dup_items.append(x)
+      nodup_items [x] += 1
+print(f'Duplicate numbers in final_list {dup_items}')
   
-
+print (nodup_items)
