@@ -1,3 +1,6 @@
+
+from random import random
+
 name = 'Joe'
 print('Hi, %s.' % name)
 
@@ -21,6 +24,8 @@ for num in mylist:
 
 print (f'\nThe variable type is {type (mylist)}, good hey!\n')
 
+print ('\n')
+
 for num in another_list:
   num = num **2
   print (num)
@@ -28,44 +33,49 @@ for num in another_list:
 final_list = mylist + another_list
 print (final_list)
 
+print ('\n')
+
 final_list [0] = 99
 final_list [3] = 'Even number'
+
+print ('\n')
 
 print (final_list)
 
 final_list.remove(4)
 print (final_list)
 
-final_list.append ('\nOdd Number')
+final_list.append ('Odd Number')
 print (final_list)
 
 final_list.pop()
 print (final_list)
 
-
 # Removing items in a list using index numbers with .pop
 item = int (input("\nWhich index value do you want to remove? "))
-print (f'\nYou entered index number {item} and we are going to remove it')
+print (f'\nYou entered index number {item}, and we are going to remove the value now:')
 
 x = final_list[item]
 
 item_range = item + 2
-print (f'We are going to print a range from index {item, item_range}')
-print (f'\nFinal list, range is {final_list[item:item_range]}')
+print (f'We are going to print a range from index {item, item_range}\n')
+print (f'\nFinal list, range is: {final_list[item:item_range]}\n')
 
-print (f'The item we are removing is {final_list[item]}')
+print (f'The item we are removing is: {final_list[item]}')
 final_list.pop(item)
 
-print (f'\nWe removed {item} from the list with a value {x}')
-print (final_list)
+print (f'\nWe removed index {item} from the list with a value of: {x}\n')
+print (f'List now looks like: {final_list}')
 
+print ('\n')
 
 # trying to find duplicates in final_list
-
-print ('\n More attempts at duplicates here')
+print ('DUPLICATES')
+print ('\nSearching the list for duplicates.....')
 
 dup_items = [] # creates a list of duplicates
 nodup_items = {} # creates a dict of unqiue items
+
 for x in final_list:
    if x not in nodup_items:
       nodup_items[x] = 1
@@ -74,5 +84,14 @@ for x in final_list:
          dup_items.append(x)
       nodup_items [x] += 1
 print(f'Duplicate numbers in final_list {dup_items}')
-  
-print (nodup_items)
+
+my_rndnum = random()
+print (f'Your random number is: {my_rndnum}')
+
+print (format (my_rndnum,'2.2f'))
+print ('%2.4f' %my_rndnum)
+print ()
+
+
+
+print ('END')
