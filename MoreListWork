@@ -1,0 +1,10 @@
+# This file will contain more list work
+# I know that this ability is going to be critical
+
+
+my_first = ['Stephen','Nella','Ellen','Jessica','Martha','Leia','Tilly']
+my_middle = ['Andrew','LoPresti','Amy','Sarah','May','Marilyn',Mynt']
+
+print (my_first)
+print (my_middle)
+

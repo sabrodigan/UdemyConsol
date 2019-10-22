@@ -1,97 +1,67 @@
+# This file will contain more list work
+# I know that this ability is going to be critical
 
-from random import random
+my_first = ['Stephen','Nella','Ellen','Jessica','Martha','Leia','Tilly']
+my_middle = ['Andrew','LoPresti','Amy','Sarah','May','Marilyn','Mynt']
 
-name = 'Joe'
-print('Hi, %s.' % name)
-
-mylist = [1,2,3,4,4,5]
-another_list = [6,7,8,9,10,10,11,16,21,34,56,21,44,23,44]
-
-print (mylist)
-print (another_list)
-
-for num in mylist:
-  if num == 4:
-    print (f'Found your number {num}')
-
-print ('\nYour list mylist has',len (mylist,),'in it')
-
-for num in mylist:
-  num = num + num
-  print (num)
-
-# I want to see if the values in the list are the same as each other
-
-print (f'\nThe variable type is {type (mylist)}, good hey!\n')
+print (my_first)
+print (my_middle)
 
 print ('\n')
 
-for num in another_list:
-  num = num **2
-  print (num)
-
-final_list = mylist + another_list
-print (final_list)
-
-print ('\n')
-
-final_list [0] = 99
-final_list [3] = 'Even number'
+for name in my_first:
+  if name [0] == 'S':
+    print (f'{name}, definitely does being with S\n')
+  else:
+    print (f'{name} does not begin with S')
 
 print ('\n')
 
-print (final_list)
+for name in my_first:
+  print (name)
 
-final_list.remove(4)
-print (final_list)
+# Tuple Unpacking
 
-final_list.append ('Odd Number')
-print (final_list)
+tup = [(1,2),(3,4),(4,5),(6,7),(7,8),(9,10)]
 
-final_list.pop()
-print (final_list)
-
-# Removing items in a list using index numbers with .pop
-item = int (input("\nWhich index value do you want to remove? "))
-print (f'\nYou entered index number {item}, and we are going to remove the value now:')
-
-x = final_list[item]
-
-item_range = item + 2
-print (f'We are going to print a range from index {item, item_range}\n')
-print (f'\nFinal list, range is: {final_list[item:item_range]}\n')
-
-print (f'The item we are removing is: {final_list[item]}')
-final_list.pop(item)
-
-print (f'\nWe removed index {item} from the list with a value of: {x}\n')
-print (f'List now looks like: {final_list}')
+print (tup)
 
 print ('\n')
 
-# trying to find duplicates in final_list
-print ('DUPLICATES')
-print ('\nSearching the list for duplicates.....')
+for item in tup:
+  print (item)
 
-dup_items = [] # creates a list of duplicates
-nodup_items = {} # creates a dict of unqiue items
+print ('\n')
 
-for x in final_list:
-   if x not in nodup_items:
-      nodup_items[x] = 1
-   else:
-      if nodup_items[x] == 1:
-         dup_items.append(x)
-      nodup_items [x] += 1
-print(f'Duplicate numbers in final_list {dup_items}')
+for a,b in tup: # I do not need to use (a,b)
+  print (a)
+  print (b)
+  print ('\n')
 
-my_rndnum = random()
-print (f'Your random number is: {my_rndnum}')
+dic = {'k1':100,'k2':'Stephen','k3':999}
+print (dic)
 
-print (format (my_rndnum,'2.2f'))
-print ('%2.4f' %my_rndnum)
-print ()
+print ('\nNow pulling out Items and Keys\n')
+
+for item in dic.items():
+  print (item)
+
+for item in dic.keys():
+  print (item)
+  if item == 'k2':
+    print ('\n Found it!')
+else:
+  print (item)
+
+# Unpacking the dictionary
+print ('\nUnpacking the dictionary a bit now\n')
+
+for key, value in dic.items():
+  print (f'Dictionary shows {key}, {value}, inside')
+  print ('\n')
+
+for value in dic.values():
+  print (f'Value is: {value}')
+  print ('\n')
 
 
-
-print ('END')
