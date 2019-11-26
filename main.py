@@ -1,5 +1,6 @@
 # This file will contain more list work
 # I know that this ability is going to be critical
+# pythonista saved and uploaded to Git
 
 my_first = ['Stephen','Nella','Ellen','Jessica','Martha','Leia','Tilly']
 my_middle = ['Andrew','LoPresti','Amy','Sarah','May','Marilyn','Mynt']
