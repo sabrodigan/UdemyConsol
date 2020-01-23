@@ -24,7 +24,7 @@ for name in my_first:
 # Tuple Unpacking
 
 tup = [(1,2),(3,4),(4,5),(6,7),(7,8),(9,10)]
-
+print('\nThis is the full tuple')
 print (tup)
 
 print ('\n')
@@ -35,8 +35,8 @@ for item in tup:
 print ('\n')
 
 for a,b in tup: # I do not need to use (a,b)
-  print (a)
-  print (b)
+  print (f'This is a: {a}')
+  print (f'This is b: {b}')
   print ('\n')
 
 dic = {'k1':100,'k2':'Stephen','k3':999}
